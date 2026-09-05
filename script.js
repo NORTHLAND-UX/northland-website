@@ -1,0 +1,4 @@
+const menu=document.querySelector('.menu'), nav=document.querySelector('.nav nav');
+if(menu){menu.addEventListener('click',()=>{nav.style.display=nav.style.display==='flex'?'none':'flex';nav.style.position='absolute';nav.style.top='72px';nav.style.left='0';nav.style.right='0';nav.style.padding='18px 24px';nav.style.background='#fff';nav.style.flexDirection='column';nav.style.alignItems='stretch';nav.style.borderBottom='1px solid #e6e9ee';});}
+const form=document.getElementById('quoteForm');
+form?.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const text=`Hello Northland Building Materials, I would like to request a quotation.%0A%0AName / Company: ${encodeURIComponent(d.get('name'))}%0APhone / WhatsApp: ${encodeURIComponent(d.get('phone'))}%0ARequirements: ${encodeURIComponent(d.get('message'))}`;window.open(`https://wa.me/971502835275?text=${text}`,'_blank');});
